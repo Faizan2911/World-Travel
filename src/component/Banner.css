@@ -14,11 +14,23 @@
     width: 300px;
 }
 
+.banner_search{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.banner_searchBtn{    
+    font-weight: 900;
+    text-transform: inherit;
+}
+
+
 .banner_info > button{
     background-color: brown;
     color: white;
     text-transform: inherit;
-    font-weight: 600;
+    font-weight: 600;    
 }
 
 .banner_info > h5{
