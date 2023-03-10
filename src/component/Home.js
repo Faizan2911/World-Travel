@@ -39,9 +39,9 @@ function Home() {
           title="Entire homes"
           description="Comfortable private places, with room for friends or family."
         />
-        <Card src="https://a0.muscache.com/im/pictures/eb9c7c6a-ee33-414a-b1ba-14e8860d59b3.jpg?im_w=720"
-          title="Online Experiences"
-          description="Unique activities we can do together, led by a world of hosts."
+        <Card src="https://i.pinimg.com/originals/f3/71/9c/f3719c7d34c600734d4f2b3d094db54c.jpg?im_w=720"
+          title="Guest House in London"
+          description="Golden glory guest house is a business and family class guest house located at London"
         />
       </div>
 

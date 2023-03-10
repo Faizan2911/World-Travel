@@ -7,11 +7,21 @@ import 'react-date-range/dist/theme/default.css'; // theme css file
 import { DateRangePicker } from 'react-date-range'
 import { Button } from '@mui/material';
 import PeopleIcon from '@mui/icons-material/People';
+import { useNavigate } from 'react-router-dom';
+
+
 
 function Search() {
 
+    const navigate = useNavigate();    // go to history page
     const [startDate, setStartDate] = useState(new Date());
     const [endDate, setEndDate] = useState(new Date());
+
+
+    const handleClick = () => {
+        navigate('/search');
+    };
+
 
     const selectionRange = {
         startDate: startDate,
@@ -25,19 +35,20 @@ function Search() {
         setEndDate(ranges.selection.endDate);
     }
 
+
     return (
         <div className='search_date'>
 
             <DateRangePicker ranges={[selectionRange]}
                 onChange={handleSelect} />
 
-           <h2>
-            Number of Guests
-            <PeopleIcon />
-           </h2>
-           
-           <input min={0} defaultValue={2} type="number" />
-           <Button>Search World Travel</Button>
+            <h2>
+                Number of Guests
+                <PeopleIcon />
+            </h2>
+
+            <input min={0} defaultValue={2} type="number" />
+            <Button onClick={handleClick}>Search World Travel</Button>
         </div>
     )
 }

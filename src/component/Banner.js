@@ -3,10 +3,19 @@ import React, { useState } from 'react'
 import './Banner.css'
 import { Button } from '@mui/material'
 import Search from './Search';
+import { useNavigate } from 'react-router-dom';
+
 
 function Banner() {
 
+  const navigate = useNavigate();                       // got to history page
   const [showSearch, setShowSearch] = useState(false);
+
+  const handleClick = () => {
+    navigate('/search');
+  };
+
+
 
   return (
     <div className='banner'>
@@ -23,7 +32,8 @@ function Banner() {
       <div className="banner_info">
         <h1>Get out and stretch your imagination</h1>
         <h5>Plan a different kind of getaway to uncover the hidden gems near you.</h5>
-        <Button variant='contained'>Explore Nearby</Button>
+
+        <Button onClick={handleClick} variant='contained'>Explore Nearby</Button>
       </div>
 
     </div>
